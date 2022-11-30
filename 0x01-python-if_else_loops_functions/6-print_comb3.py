@@ -1,8 +1,5 @@
 #!/usr/bin/python3
+"""Print the alphabet in lowercase, not followed by a new line."""
 
-for i in range(0, 9):
-    for j in range(i + 1, 10):
-        if i == 8:
-            print(f"{i}{j}")
-        else:
-            print(f"{i}{j}", end=", ")
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")
