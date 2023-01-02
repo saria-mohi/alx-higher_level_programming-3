@@ -5,6 +5,7 @@
 class Rectangle:
     """ Rectangle class"""
     def __init__(self, width=0, height=0):
+        """Initialiazes the rectangle"""
         self.width = width
         self.height = height
 
@@ -33,11 +34,21 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """returns the area of the rectangle"""
+        """Returns the area of the rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-        """return the perimeter of the rectangle"""
+        """Returns the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__height + self.__width)
+
+    def __str__(self):
+        """Returns a string rep of the rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return (("#" * self.__width + "\n") * self.__height)[:-1]
+
+    def __repr__(self):
+        '''Returns formal string representation...'''
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
